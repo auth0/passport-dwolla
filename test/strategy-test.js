@@ -30,7 +30,8 @@ vows.describe('DwollaStrategy').addBatch({
       
       // mock
       strategy._oauth2.get = function(url, accessToken, callback) {
-        var body = '{ \
+        var body = '{ \ 
+            "Response": { \
             "City": "Des Moines", \
             "Id": "812-111-1111", \
             "Latitude": 41.584546, \
@@ -38,7 +39,7 @@ vows.describe('DwollaStrategy').addBatch({
             "Name": "Test User", \
             "State": "IA", \
             "Type": "Personal" \
-        }';
+        }}';
         
         callback(null, body, undefined);
       }
