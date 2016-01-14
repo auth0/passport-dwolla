@@ -45,7 +45,7 @@ application:
     app.get('/auth/dwolla',
       passport.authenticate('dwolla', { scope: 'AccountInfoFull' }));
 
-    app.get('/auth/dwolla/callback', 
+    app.get('/auth/dwolla/callback',
       passport.authenticate('dwolla', { failureRedirect: '/login' }),
       function(req, res) {
         // Successful authentication, redirect home.
@@ -67,8 +67,10 @@ For a complete, working example, refer to the [login example](https://github.com
 
   - [Jared Hanson](http://github.com/jaredhanson)
 
+## Author
+
+[Auth0](auth0.com)
+
 ## License
 
-[The MIT License](http://opensource.org/licenses/MIT)
-
-Copyright (c) 2011-2013 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>
+This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more info.
